@@ -1,1 +1,1 @@
-# velog
+# Verilog 
