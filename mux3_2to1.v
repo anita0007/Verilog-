@@ -1,0 +1,10 @@
+module mux3_2to1(I0,I1,I2,I3,S0,S1,Y);
+input I0,I1,I2,I3,S0,S1;
+output Y;
+wire A,B;
+
+mux2to1(I0,I1,S0,A);
+mux2to1(I2,I3,S0,B);
+mux2to1(A,B,S1,Y);
+
+endmodule
