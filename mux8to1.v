@@ -1,0 +1,31 @@
+module mux8to1(x,y,z,I,S,Y);
+input [7:0]I;
+input [2:0]S;
+input x,y,z;
+output Y;
+output reg [7:0]I;
+wire A,B;
+
+always @(x,y,z)begin
+	if(x==0 & y==0 & z==0)begin
+		I[0] = 1;
+	end
+	else if(x==0 & y ==1 & z==0) begin
+		I[2] = 1;
+	end
+	else if(x==0 & y ==1 & z==1) begin
+		I[3] = 1;
+	end
+	else if(x==1 & y ==0 & z==1) begin
+		I[5] = 1;
+	end
+	else if(x==1 & y ==1 & z==1) begin
+		I[7] = 1;
+	end
+end
+
+mux4to1(I[0],I[1],I[2],I[3],S[0],A);
+mux4to1(I[4],I[5],I[6],I[7],S[1],B);
+mux2to1(A,B,S[2],Y);
+
+endmodule
