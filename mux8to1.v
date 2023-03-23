@@ -1,5 +1,4 @@
 module mux8to1(x,y,z,I,S,Y);
-input [7:0]I;
 input [2:0]S;
 input x,y,z;
 output Y;
@@ -24,8 +23,8 @@ always @(x,y,z)begin
 	end
 end
 
-mux4to1(I[0],I[1],I[2],I[3],S[0],A);
-mux4to1(I[4],I[5],I[6],I[7],S[1],B);
-mux2to1(A,B,S[2],Y);
+mux4to1 m40(I[0],0,I[2],I[3],S[1:0],A);
+mux4to1 m41(0,I[5],0,I[7],S[1:0],B);
+mux2to1 m20(A,B,S[2],Y);
 
 endmodule
