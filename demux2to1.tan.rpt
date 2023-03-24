@@ -1,5 +1,5 @@
-Classic Timing Analyzer report for mux4to1_3
-Fri Mar 24 15:31:05 2023
+Classic Timing Analyzer report for demux2to1
+Fri Mar 24 16:45:17 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -34,14 +34,14 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                               ;
-+------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time ; From ; To ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
-; Worst-case tpd               ; N/A   ; None          ; 8.882 ns    ; z    ; F  ; --         ; --       ; 0            ;
-; Total number of failed paths ;       ;               ;             ;      ;    ;            ;          ; 0            ;
-+------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                 ;
++------------------------------+-------+---------------+-------------+------+------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From ; To   ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+------+------+------------+----------+--------------+
+; Worst-case tpd               ; N/A   ; None          ; 11.086 ns   ; E    ; Y[1] ; --         ; --       ; 0            ;
+; Total number of failed paths ;       ;               ;             ;      ;      ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+------+------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -87,16 +87,44 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------+
-; tpd                                                     ;
-+-------+-------------------+-----------------+------+----+
-; Slack ; Required P2P Time ; Actual P2P Time ; From ; To ;
-+-------+-------------------+-----------------+------+----+
-; N/A   ; None              ; 8.882 ns        ; z    ; F  ;
-; N/A   ; None              ; 8.719 ns        ; w    ; F  ;
-; N/A   ; None              ; 8.018 ns        ; x    ; F  ;
-; N/A   ; None              ; 7.644 ns        ; y    ; F  ;
-+-------+-------------------+-----------------+------+----+
++-----------------------------------------------------------+
+; tpd                                                       ;
++-------+-------------------+-----------------+------+------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From ; To   ;
++-------+-------------------+-----------------+------+------+
+; N/A   ; None              ; 11.086 ns       ; E    ; Y[1] ;
+; N/A   ; None              ; 10.895 ns       ; S[0] ; Y[1] ;
+; N/A   ; None              ; 10.764 ns       ; S[1] ; Y[1] ;
+; N/A   ; None              ; 10.350 ns       ; D    ; Y[1] ;
+; N/A   ; None              ; 10.183 ns       ; E    ; Y[2] ;
+; N/A   ; None              ; 10.130 ns       ; E    ; Y[7] ;
+; N/A   ; None              ; 9.996 ns        ; S[0] ; Y[2] ;
+; N/A   ; None              ; 9.956 ns        ; S[0] ; Y[7] ;
+; N/A   ; None              ; 9.955 ns        ; E    ; Y[0] ;
+; N/A   ; None              ; 9.937 ns        ; E    ; Y[6] ;
+; N/A   ; None              ; 9.924 ns        ; E    ; Y[4] ;
+; N/A   ; None              ; 9.827 ns        ; S[1] ; Y[2] ;
+; N/A   ; None              ; 9.770 ns        ; S[1] ; Y[7] ;
+; N/A   ; None              ; 9.764 ns        ; S[0] ; Y[0] ;
+; N/A   ; None              ; 9.750 ns        ; E    ; Y[5] ;
+; N/A   ; None              ; 9.740 ns        ; S[0] ; Y[4] ;
+; N/A   ; None              ; 9.604 ns        ; S[0] ; Y[6] ;
+; N/A   ; None              ; 9.599 ns        ; S[1] ; Y[0] ;
+; N/A   ; None              ; 9.576 ns        ; S[1] ; Y[6] ;
+; N/A   ; None              ; 9.567 ns        ; S[1] ; Y[4] ;
+; N/A   ; None              ; 9.566 ns        ; S[0] ; Y[5] ;
+; N/A   ; None              ; 9.447 ns        ; D    ; Y[2] ;
+; N/A   ; None              ; 9.402 ns        ; D    ; Y[7] ;
+; N/A   ; None              ; 9.392 ns        ; S[1] ; Y[5] ;
+; N/A   ; None              ; 9.219 ns        ; D    ; Y[0] ;
+; N/A   ; None              ; 9.209 ns        ; D    ; Y[6] ;
+; N/A   ; None              ; 9.188 ns        ; D    ; Y[4] ;
+; N/A   ; None              ; 9.014 ns        ; D    ; Y[5] ;
+; N/A   ; None              ; 8.037 ns        ; E    ; Y[3] ;
+; N/A   ; None              ; 7.850 ns        ; S[0] ; Y[3] ;
+; N/A   ; None              ; 7.715 ns        ; S[1] ; Y[3] ;
+; N/A   ; None              ; 7.301 ns        ; D    ; Y[3] ;
++-------+-------------------+-----------------+------+------+
 
 
 +--------------------------+
@@ -105,18 +133,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Mar 24 15:31:04 2023
-Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off mux4to1_3 -c mux4to1_3 --timing_analysis_only
-Info: Longest tpd from source pin "z" to destination pin "F" is 8.882 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.809 ns) = 0.809 ns; Loc. = PIN_B12; Fanout = 1; PIN Node = 'z'
-    Info: 2: + IC(5.053 ns) + CELL(0.154 ns) = 6.016 ns; Loc. = LCCOMB_X38_Y8_N2; Fanout = 1; COMB Node = 'mux4to1:m40|Mux0~0'
-    Info: 3: + IC(0.722 ns) + CELL(2.144 ns) = 8.882 ns; Loc. = PIN_P2; Fanout = 0; PIN Node = 'F'
-    Info: Total cell delay = 3.107 ns ( 34.98 % )
-    Info: Total interconnect delay = 5.775 ns ( 65.02 % )
+    Info: Processing started: Fri Mar 24 16:45:17 2023
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off demux2to1 -c demux2to1 --timing_analysis_only
+Info: Longest tpd from source pin "E" to destination pin "Y[1]" is 11.086 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_G21; Fanout = 8; PIN Node = 'E'
+    Info: 2: + IC(4.225 ns) + CELL(0.346 ns) = 5.401 ns; Loc. = LCCOMB_X9_Y26_N16; Fanout = 1; COMB Node = 'demux1to4:m0|Y[1]~1'
+    Info: 3: + IC(3.531 ns) + CELL(2.154 ns) = 11.086 ns; Loc. = PIN_T1; Fanout = 0; PIN Node = 'Y[1]'
+    Info: Total cell delay = 3.330 ns ( 30.04 % )
+    Info: Total interconnect delay = 7.756 ns ( 69.96 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 194 megabytes
-    Info: Processing ended: Fri Mar 24 15:31:05 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Mar 24 16:45:17 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

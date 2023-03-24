@@ -1,0 +1,11 @@
+module demux1to4(D,E,S,Y);
+input D,E;
+input [1:0]S;
+output [3:0]Y;
+
+assign Y[0] = ~E&~S[1]&~S[0]&D;
+assign Y[1] = ~E&~S[1]&S[0]&D;
+assign Y[2] = ~E&S[1]&~S[0]&D;
+assign Y[3] = ~E&S[1]&S[0]&D;
+
+endmodule

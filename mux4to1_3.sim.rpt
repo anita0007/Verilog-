@@ -1,5 +1,5 @@
 Simulator report for mux4to1_3
-Fri Mar 24 14:37:40 2023
+Fri Mar 24 15:35:39 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 16 nodes     ;
+; Simulation Netlist Size     ; 21 nodes     ;
 ; Simulation Coverage         ;     100.00 % ;
-; Total Number of Transitions ; 106          ;
+; Total Number of Transitions ; 174          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Stratix II   ;
 +-----------------------------+--------------+
@@ -61,7 +61,7 @@ applicable agreement for further details.
 ; Simulation mode                                                                            ; Functional       ; Timing        ;
 ; Start time                                                                                 ; 0 ns             ; 0 ns          ;
 ; Simulation results format                                                                  ; CVWF             ;               ;
-; Vector input source                                                                        ; ../mux4to1_4.vwf ;               ;
+; Vector input source                                                                        ; ../mux4to1_5.vwf ;               ;
 ; Add pins automatically to simulation output waveforms                                      ; On               ; On            ;
 ; Check outputs                                                                              ; Off              ; Off           ;
 ; Report simulation coverage                                                                 ; On               ; On            ;
@@ -95,9 +95,9 @@ Please use Quartus II to view the waveform report data.
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
 ; Total coverage as a percentage                      ;     100.00 % ;
-; Total nodes checked                                 ; 16           ;
-; Total output ports checked                          ; 16           ;
-; Total output ports with complete 1/0-value coverage ; 16           ;
+; Total nodes checked                                 ; 21           ;
+; Total output ports checked                          ; 21           ;
+; Total output ports with complete 1/0-value coverage ; 21           ;
 ; Total output ports with no 1/0-value coverage       ; 0            ;
 ; Total output ports with no 1-value coverage         ; 0            ;
 ; Total output ports with no 0-value coverage         ; 0            ;
@@ -110,22 +110,27 @@ The following table displays output ports that toggle between 1 and 0 during sim
 +-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                         ; Output Port Name                                                                  ; Output Port Type ;
 +-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
-; |mux4to1_3|x                                                                      ; |mux4to1_3|x                                                                      ; out              ;
-; |mux4to1_3|y                                                                      ; |mux4to1_3|y                                                                      ; out              ;
-; |mux4to1_3|z                                                                      ; |mux4to1_3|z                                                                      ; out              ;
-; |mux4to1_3|F                                                                      ; |mux4to1_3|F                                                                      ; pin_out          ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
-; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; |mux4to1_3|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
+; |mux4to1_5|comb~0                                                                 ; |mux4to1_5|comb~0                                                                 ; out0             ;
+; |mux4to1_5|comb~1                                                                 ; |mux4to1_5|comb~1                                                                 ; out0             ;
+; |mux4to1_5|comb~2                                                                 ; |mux4to1_5|comb~2                                                                 ; out0             ;
+; |mux4to1_5|comb~3                                                                 ; |mux4to1_5|comb~3                                                                 ; out0             ;
+; |mux4to1_5|w                                                                      ; |mux4to1_5|w                                                                      ; out              ;
+; |mux4to1_5|x                                                                      ; |mux4to1_5|x                                                                      ; out              ;
+; |mux4to1_5|y                                                                      ; |mux4to1_5|y                                                                      ; out              ;
+; |mux4to1_5|z                                                                      ; |mux4to1_5|z                                                                      ; out              ;
+; |mux4to1_5|F                                                                      ; |mux4to1_5|F                                                                      ; pin_out          ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~0 ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~0                    ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout~1 ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n0_mux_dataout   ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~0 ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~1                    ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout~1 ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l1_w0_n1_mux_dataout   ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~0 ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|_~2                    ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout~1 ; out0             ;
+; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; |mux4to1_5|mux4to1:m40|lpm_mux:Mux0|mux_0oc:auto_generated|l2_w0_n0_mux_dataout   ; out0             ;
 +-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
 
 
@@ -158,18 +163,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Mar 24 14:37:39 2023
+    Info: Processing started: Fri Mar 24 15:35:39 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off mux4to1_3 -c mux4to1_3
-Info: Using vector source file "../mux4to1_4.vwf"
+Info: Using vector source file "../mux4to1_5.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
 Info: Simulation coverage is     100.00 %
-Info: Number of transitions in simulation is 106
+Info: Number of transitions in simulation is 174
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 158 megabytes
-    Info: Processing ended: Fri Mar 24 14:37:40 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Fri Mar 24 15:35:39 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 
