@@ -1,0 +1,9 @@
+module code8to3(I,A);
+input [7:0]I;
+output [2:0]A;
+
+assign A[0] = I[1]|I[3]|I[5]|I[7];
+assign A[1] = I[2]|I[3]|I[6]|I[7];
+assign A[2] = I[4]|I[5]|I[6]|I[7];
+
+endmodule

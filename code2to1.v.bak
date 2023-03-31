@@ -1,0 +1,11 @@
+module code4to2(I,A,V);
+input [3:0]I;
+output [1:0]A;
+output V;
+
+if (I[0] = 0 & I[1] = 0 & I[3] = 0 )begin
+	A[0] = 0 , A[1] = 0 , V = 0;
+end
+
+
+	
