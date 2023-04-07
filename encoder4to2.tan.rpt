@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for encoder4to2
-Thu Apr 06 21:48:26 2023
+Fri Apr 07 15:23:08 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -34,14 +34,14 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                               ;
-+------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time ; From ; To ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
-; Worst-case tpd               ; N/A   ; None          ; 10.053 ns   ; I[2] ; V  ; --         ; --       ; 0            ;
-; Total number of failed paths ;       ;               ;             ;      ;    ;            ;          ; 0            ;
-+------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                  ;
++------------------------------+-------+---------------+-------------+-------+------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From  ; To   ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+-------+------+------------+----------+--------------+
+; Worst-case tpd               ; N/A   ; None          ; 11.560 ns   ; I[12] ; A[0] ; --         ; --       ; 0            ;
+; Total number of failed paths ;       ;               ;             ;       ;      ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+-------+------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -87,21 +87,63 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------+
-; tpd                                                       ;
-+-------+-------------------+-----------------+------+------+
-; Slack ; Required P2P Time ; Actual P2P Time ; From ; To   ;
-+-------+-------------------+-----------------+------+------+
-; N/A   ; None              ; 10.053 ns       ; I[2] ; V    ;
-; N/A   ; None              ; 9.922 ns        ; I[3] ; V    ;
-; N/A   ; None              ; 9.864 ns        ; I[0] ; V    ;
-; N/A   ; None              ; 9.572 ns        ; I[1] ; V    ;
-; N/A   ; None              ; 8.807 ns        ; I[2] ; Y[1] ;
-; N/A   ; None              ; 8.750 ns        ; I[3] ; Y[1] ;
-; N/A   ; None              ; 8.711 ns        ; I[2] ; Y[0] ;
-; N/A   ; None              ; 8.580 ns        ; I[3] ; Y[0] ;
-; N/A   ; None              ; 8.229 ns        ; I[1] ; Y[0] ;
-+-------+-------------------+-----------------+------+------+
++------------------------------------------------------------+
+; tpd                                                        ;
++-------+-------------------+-----------------+-------+------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From  ; To   ;
++-------+-------------------+-----------------+-------+------+
+; N/A   ; None              ; 11.560 ns       ; I[12] ; A[0] ;
+; N/A   ; None              ; 11.395 ns       ; I[11] ; A[0] ;
+; N/A   ; None              ; 11.140 ns       ; I[8]  ; A[0] ;
+; N/A   ; None              ; 11.137 ns       ; I[12] ; A[2] ;
+; N/A   ; None              ; 10.942 ns       ; I[11] ; A[2] ;
+; N/A   ; None              ; 10.917 ns       ; I[13] ; A[0] ;
+; N/A   ; None              ; 10.848 ns       ; I[12] ; GS   ;
+; N/A   ; None              ; 10.834 ns       ; I[5]  ; A[0] ;
+; N/A   ; None              ; 10.803 ns       ; I[11] ; GS   ;
+; N/A   ; None              ; 10.745 ns       ; I[2]  ; A[0] ;
+; N/A   ; None              ; 10.716 ns       ; I[6]  ; A[2] ;
+; N/A   ; None              ; 10.687 ns       ; I[8]  ; A[2] ;
+; N/A   ; None              ; 10.674 ns       ; I[6]  ; A[0] ;
+; N/A   ; None              ; 10.551 ns       ; I[9]  ; A[0] ;
+; N/A   ; None              ; 10.548 ns       ; I[8]  ; GS   ;
+; N/A   ; None              ; 10.494 ns       ; I[13] ; A[2] ;
+; N/A   ; None              ; 10.441 ns       ; I[14] ; A[0] ;
+; N/A   ; None              ; 10.431 ns       ; I[10] ; A[0] ;
+; N/A   ; None              ; 10.418 ns       ; I[3]  ; A[0] ;
+; N/A   ; None              ; 10.414 ns       ; I[15] ; A[0] ;
+; N/A   ; None              ; 10.411 ns       ; I[5]  ; A[2] ;
+; N/A   ; None              ; 10.401 ns       ; I[4]  ; A[0] ;
+; N/A   ; None              ; 10.261 ns       ; I[1]  ; A[0] ;
+; N/A   ; None              ; 10.205 ns       ; I[13] ; GS   ;
+; N/A   ; None              ; 10.124 ns       ; I[7]  ; A[2] ;
+; N/A   ; None              ; 10.098 ns       ; I[9]  ; A[2] ;
+; N/A   ; None              ; 10.018 ns       ; I[14] ; A[2] ;
+; N/A   ; None              ; 9.991 ns        ; I[15] ; A[2] ;
+; N/A   ; None              ; 9.982 ns        ; I[7]  ; A[0] ;
+; N/A   ; None              ; 9.978 ns        ; I[10] ; A[2] ;
+; N/A   ; None              ; 9.959 ns        ; I[9]  ; GS   ;
+; N/A   ; None              ; 9.839 ns        ; I[10] ; GS   ;
+; N/A   ; None              ; 9.787 ns        ; I[11] ; A[1] ;
+; N/A   ; None              ; 9.737 ns        ; I[12] ; A[1] ;
+; N/A   ; None              ; 9.729 ns        ; I[14] ; GS   ;
+; N/A   ; None              ; 9.702 ns        ; I[15] ; GS   ;
+; N/A   ; None              ; 9.532 ns        ; I[8]  ; A[1] ;
+; N/A   ; None              ; 9.471 ns        ; I[4]  ; A[2] ;
+; N/A   ; None              ; 9.407 ns        ; I[5]  ; A[1] ;
+; N/A   ; None              ; 9.335 ns        ; I[6]  ; A[1] ;
+; N/A   ; None              ; 9.218 ns        ; I[0]  ; GS   ;
+; N/A   ; None              ; 9.094 ns        ; I[13] ; A[1] ;
+; N/A   ; None              ; 9.018 ns        ; I[2]  ; A[1] ;
+; N/A   ; None              ; 8.943 ns        ; I[9]  ; A[1] ;
+; N/A   ; None              ; 8.925 ns        ; I[14] ; A[1] ;
+; N/A   ; None              ; 8.910 ns        ; I[15] ; A[1] ;
+; N/A   ; None              ; 8.823 ns        ; I[10] ; A[1] ;
+; N/A   ; None              ; 8.743 ns        ; I[7]  ; A[1] ;
+; N/A   ; None              ; 8.691 ns        ; I[3]  ; A[1] ;
+; N/A   ; None              ; 8.673 ns        ; I[4]  ; A[1] ;
+; N/A   ; None              ; 7.109 ns        ; I[8]  ; A[3] ;
++-------+-------------------+-----------------+-------+------+
 
 
 +--------------------------+
@@ -110,17 +152,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Apr 06 21:48:26 2023
+    Info: Processing started: Fri Apr 07 15:23:08 2023
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off encoder4to2 -c encoder4to2 --timing_analysis_only
-Info: Longest tpd from source pin "I[2]" to destination pin "V" is 10.053 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_AA8; Fanout = 3; PIN Node = 'I[2]'
-    Info: 2: + IC(4.113 ns) + CELL(0.346 ns) = 5.316 ns; Loc. = LCCOMB_X27_Y7_N0; Fanout = 1; COMB Node = 'V~0'
-    Info: 3: + IC(2.795 ns) + CELL(1.942 ns) = 10.053 ns; Loc. = PIN_G14; Fanout = 0; PIN Node = 'V'
-    Info: Total cell delay = 3.145 ns ( 31.28 % )
-    Info: Total interconnect delay = 6.908 ns ( 68.72 % )
+Info: Longest tpd from source pin "I[12]" to destination pin "A[0]" is 11.560 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_R22; Fanout = 3; PIN Node = 'I[12]'
+    Info: 2: + IC(4.703 ns) + CELL(0.366 ns) = 5.899 ns; Loc. = LCCOMB_X26_Y1_N24; Fanout = 4; COMB Node = 'encoder8to3:co1|EO~0'
+    Info: 3: + IC(0.281 ns) + CELL(0.357 ns) = 6.537 ns; Loc. = LCCOMB_X26_Y1_N28; Fanout = 1; COMB Node = 'A~0'
+    Info: 4: + IC(0.228 ns) + CELL(0.225 ns) = 6.990 ns; Loc. = LCCOMB_X26_Y1_N18; Fanout = 1; COMB Node = 'A~1'
+    Info: 5: + IC(2.588 ns) + CELL(1.982 ns) = 11.560 ns; Loc. = PIN_B6; Fanout = 0; PIN Node = 'A[0]'
+    Info: Total cell delay = 3.760 ns ( 32.53 % )
+    Info: Total interconnect delay = 7.800 ns ( 67.47 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 190 megabytes
-    Info: Processing ended: Thu Apr 06 21:48:26 2023
+    Info: Peak virtual memory: 194 megabytes
+    Info: Processing ended: Fri Apr 07 15:23:08 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
